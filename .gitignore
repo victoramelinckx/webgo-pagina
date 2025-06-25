@@ -1,0 +1,64 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.pnp.loader.mjs
+
+.next
+
+# Testing
+/coverage
+
+# Next.js build output
+/.next/
+/out/
+
+# Production build
+/build
+
+# Vercel
+.vercel
+
+# Static exports
+/export
+
+# Turborepo
+.turbo
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Misc
+.DS_Store
+*.pem
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.idea
+.vscode
+
+# Environment variables
+.env
+.env*.local
+
+# Drizzle
+/drizzle
+/drizzle-kit
+
+# Prisma
+/prisma/schema.prisma.bak
+/prisma/schema.prisma.old
+
+# Shadcn
+/components.json
+
+# Webgo
+webgo-*.tgz
+webgo-*.tar.gz
+node_modules
