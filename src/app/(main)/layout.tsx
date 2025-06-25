@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import './globals.css';
+import '../globals.css';
 import { Analytics } from '@vercel/analytics/next';
 import { Toaster } from 'react-hot-toast';
 import { sfPro } from "@/lib/fonts";
