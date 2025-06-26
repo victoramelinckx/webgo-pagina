@@ -50,18 +50,19 @@ export const Hero = ({ headline, subheadline, cta1 }: HeroProps) => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-[0.98]">{headline}</h1>
 
           {/* Subheadline as bullet points */}
-          <div className="max-w-lg mx-auto space-y-0 text-lg md:text-xl text-black/80">
-            <div className="flex items-center justify-start gap-1 md:gap-3">
-              <div className="w-2 h-2 bg-black rounded-full" />
-              <span>Diseño y desarrollo web.</span>
+          <div className=" max-md:px-4 max-w-lg mx-auto space-y-0 text-sm font-medium  md:text-xl text-black/80">
+
+            <div className="flex items-start justify-center md:justify-start gap-1 md:gap-3">
+              <div className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-black md:mt-2.5 md:h-2 md:w-2" />
+              <span>Vende 24/7 con confianza.</span>
             </div>
-            <div className="flex items-center justify-start gap-1 md:gap-3">
-              <div className="w-2 h-2 bg-black rounded-full" />
-              <span>E-commerce seguro y eficiente: vende 24/7 con confianza.</span>
-            </div>
-            <div className="flex items-center justify-start gap-1 md:gap-3">
-              <div className="w-2 h-2 bg-black rounded-full" />
+            <div className="flex items-start justify-center md:justify-start gap-1 md:gap-3">
+              <div className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-black md:mt-2.5 md:h-2 md:w-2" />
               <span>Software a medida: automatiza y crece tu empresa.</span>
+            </div>
+            <div className="flex items-start justify-center md:justify-start gap-1 md:gap-3">
+              <div className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-black md:mt-2.5 md:h-2 md:w-2" />
+              <span>Desarrollo de plataformas digitales.</span>
             </div>
           </div>
 
@@ -69,7 +70,7 @@ export const Hero = ({ headline, subheadline, cta1 }: HeroProps) => {
           <div className="">
             <Button
               onClick={handleCTAClick}
-              className="bg-black text-white hover:bg-black/80 px-8 py-6 text-lg rounded-full font-semibold transition-all duration-300 hover:scale-105"
+              className="bg-black text-white hover:bg-black/80 px-8 py-4 md:py-6 text-lg rounded-full font-medium transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg"
             >
               {cta1}
             </Button>

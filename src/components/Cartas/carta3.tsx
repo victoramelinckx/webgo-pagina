@@ -33,8 +33,8 @@ export default function Carta3() {
     }, [inView, hasAnimated])
 
     return (
-        <div ref={ref} className="bg-white rounded-[2rem] p-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 leading-none text-black">
+        <div ref={ref} className="bg-white rounded-[2rem] py-14 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
+            <h3 className="text-[40px]  md:text-5xl font-bold mb-6 leading-none text-black">
                 Entrega garantizada en 14 días.
                 <br />
                 <span className="text-gray-500">Sin fechas que se pierden.</span>

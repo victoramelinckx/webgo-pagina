@@ -23,12 +23,12 @@ export const CartaSeguridad = () => {
     return (
         <div
             ref={ref}
-            className="md:col-span-1 bg-gradient-to-br from-orange-400/75 to-pink-400/75 to-purple-500/75 rounded-[2rem] p-12 md:p-16 relative overflow-hidden shadow-xl"
+            className="md:col-span-1 bg-gradient-to-br from-orange-400/75 to-pink-400/75 to-purple-500/75 rounded-[2rem] py-14 px-8 md:p-16 relative overflow-hidden shadow-xl"
         >
             <div className="relative z-10">
                 <div className="text-white text-lg font-medium mb-4">Privacidad y Seguridad</div>
 
-                <h3 className="text-4xl md:text-5xl font-bold leading-none text-white">
+                <h3 className="text-[42px] md:text-5xl font-bold leading-none text-white">
                     Tu sitio.
                     <br />
                     Tu información.

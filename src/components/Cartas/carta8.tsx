@@ -44,7 +44,7 @@ const landingTemplates = [
 
 export default function Carta8() {
     return (
-        <div className="md:col-span-2 bg-white rounded-[2rem] inset-shadow-xl min-h-[600px] p-8 md:p-0 md:pb-[70px] relative overflow-hidden shadow-xl">
+        <div className="md:col-span-2 bg-white rounded-[2rem] inset-shadow-xl min-h-[600px] py-14 px-8 md:p-0 md:pb-[70px] relative overflow-hidden shadow-xl">
             <div className="h-full flex flex-col ">
 
 
@@ -85,13 +85,11 @@ export default function Carta8() {
 
 
 
-                                                {/* Dark Gradient Overlay at Bottom - Exact Apple Style */}
-                                                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
                                                 {/* Bottom Text Content - Exact Apple Style */}
-                                                <div className="absolute bottom-4 left-4 right-4">
+                                                {/* <div className="absolute bottom-4 left-4 right-4">
                                                     <h3 className="text-white font-semibold text-center text-lg mb-1 leading-tight">{template.title}</h3>
-                                                </div>
+                                                </div> */}
 
                                                 {/* Subtle Hover Overlay */}
                                                 <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>

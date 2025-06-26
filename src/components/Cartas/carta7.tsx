@@ -60,14 +60,14 @@ export default function Carta7() {
     }
 
     return (
-        <div ref={ref} className="bg-black rounded-[2rem] p-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
+        <div ref={ref} className="bg-black rounded-[2rem] py-14 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
             {/* Efectos de fondo */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 rounded-[2rem]"></div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-white/5 to-transparent rounded-full blur-3xl"></div>
 
             <div className="relative z-10">
                 <motion.h3
-                    className="text-4xl md:text-[60px] font-bold mb-8 leading-none"
+                    className="text-5xl md:text-[60px] font-bold mb-8 leading-none"
                     variants={textVariants}
                     initial="hidden"
                     animate={controls}

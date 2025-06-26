@@ -134,7 +134,8 @@ body {
   h1 {
     @apply font-bold;
   }
-  h2, h3 {
+  h2,
+  h3 {
     @apply font-semibold;
   }
 }

@@ -56,11 +56,11 @@ export const How = ({ title, subtitle }: HowProps) => {
 
           <CartaSeguridad />
 
-          {/* Row 6: E-commerce */}
+          {/* Row 6: Garantía */}
           <Carta9 />
 
 
-
+          {/* Row 6: Rendimiento */}
           <Carta10 />
 
           {/* Row 6: CTA */}

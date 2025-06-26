@@ -4,22 +4,22 @@ import IphoneMockup from "../Iphone-mockup";
 export default function Carta1() {
     return (
         <div className="md:col-span-2 bg-white rounded-[2rem] h-[600px] p-8 md:p-12 relative overflow-hidden shadow-xl">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 h-full mt-20">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 h-full mt-10 md:mt-20">
                 {/* iPhone Mockup - Left Side */}
-                <div className="relative flex justify-center md:w-1/2 h-full">
+                <div className="hidden md:block relative flex justify-center md:w-1/2 h-full">
                     <IphoneMockup />
                 </div>
 
                 {/* Content - Right Side */}
                 <div className="flex flex-col md:w-1/2 h-full">
-                    <h2 className="text-4xl md:text-[42px]  font-extrabold mb-2 leading-tight text-black">
-                        Maquina de ventas 24/7.
+                    <h2 className="text-[34px] md:text-[42px]  font-extrabold mb-2 leading-tight text-black">
+                        Máquina de <br className=" md:hidden" /> ventas 24/7.
                         <br />
                         <span className="text-black">Potenciado con IA.</span>
                     </h2>
 
                     {/* Apple Card Style */}
-                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 mt-8 relative w-[90%] shadow-lg border border-gray-200/50">
+                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl max-md:mx-auto p-6 mt-8 relative w-[90%] shadow-lg border border-gray-200/50">
                         <div className="absolute top-4 left-4">
                             <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                                 <Bot className="w-5 h-5 text-white" />

@@ -66,8 +66,8 @@ export default function Carta2() {
     }, [controls, inView])
 
     return (
-        <div ref={ref} className="bg-black rounded-[2rem] md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 leading-none text-white">
+        <div ref={ref} className="bg-black rounded-[2rem] py-14 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
+            <h3 className="text-[40px] md:text-5xl font-bold mb-6 leading-none text-white">
                 Incrementa tus ventas — por día, por semana, por mes.
             </h3>
 

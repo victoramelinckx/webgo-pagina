@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { Plus, Zap, Search, FileText, TrendingUp } from "lucide-react"
 import { motion, useAnimation } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 
 export default function Carta10() {
     const { ref, inView } = useInView({
@@ -109,12 +110,12 @@ export default function Carta10() {
     return (
         <div
             ref={ref}
-            className="bg-gradient-to-br from-blue-500/80 to-green-500/80 rounded-[2rem] p-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl"
+            className="bg-gradient-to-br from-blue-500/80 to-green-500/80 rounded-[2rem] py-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl"
         >
             <div className="relative z-10">
                 {/* Header */}
-                <h3 className="text-3xl md:text-[56px] font-bold mb-6 leading-none text-white">Rendimiento extremo</h3>
-                <p className="text-white/80 text-xl font-medium">Sistemas y métodos que aseguran un alto rendimiento.</p>
+                <h3 className="text-[40px]  md:text-[56px] font-bold mb-4 md:mb-6 leading-none text-white">Rendimiento extremo</h3>
+                <p className="text-white/80 text-xl font-medium mb-4">Sistemas y métodos que aseguran un alto rendimiento.</p>
                 {/* Performance Cards - Vertical Stack */}
                 <motion.div className="space-y-4 mt-2" initial="hidden" animate={controls} variants={containerVariants}>
                     {performanceMetrics.map((metric, index) => {
@@ -127,37 +128,39 @@ export default function Carta10() {
                                 className="bg-white/20 backdrop-blur-xl rounded-2xl p-3 border border-white/30 shadow-lg hover:bg-white/25 hover:-translate-y-2 transition-all duration-300 ease-in-out"
                                 variants={itemVariants}
                             >
-                                <div className="flex items-center justify-between">
-                                    {/* Left Side - Icon and Info */}
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
-                                            <IconComponent className="w-6 h-6 text-white" />
-                                        </div>
-                                        <div>
-                                            <div className="flex items-center gap-1 mb-1">
-                                                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                                <span className="text-white/80 text-sm font-medium">{metric.description}</span>
+                                <AnimatePresence>
+                                    <div className="flex items-center justify-between">
+                                        {/* Left Side - Icon and Info */}
+                                        <div className="flex items-center gap-2 md:gap-3">
+                                            <div className="w-9 h-9 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                                                <IconComponent className="w-5 h-5 md:w-6 md:h-6 text-white" />
                                             </div>
-                                            <h4 className="text-white text-lg font-semibold">{metric.title}</h4>
+                                            <div>
+                                                <div className="flex items-center gap-1 mb-1">
+                                                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                                    <span className="text-white/80 text-xs md:text-sm font-medium">{metric.description}</span>
+                                                </div>
+                                                <h4 className="text-white text-base md:text-lg font-semibold">{metric.title}</h4>
+                                            </div>
+                                        </div>
+
+                                        {/* Right Side - Metrics */}
+                                        <div className="text-right">
+                                            <div className="text-white text-xl md:text-2xl font-bold mb-1">{metric.metric}</div>
+                                            <div className="text-white/80 text-xs md:text-sm font-mono">{animatedRating}/100</div>
+
+                                            {/* Progress Bar */}
+                                            <div className="w-20 md:w-24 bg-white/20 rounded-full h-1.5 mt-1">
+                                                <motion.div
+                                                    className="bg-white rounded-full h-1.5"
+                                                    initial={{ width: 0 }}
+                                                    animate={{ width: `${animatedRating}%` }}
+                                                    transition={{ duration: 2, delay: index * 0.2 }}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-
-                                    {/* Right Side - Metrics */}
-                                    <div className="text-right">
-                                        <div className="text-white text-2xl md:text-2xl font-bold mb-1">{metric.metric}</div>
-                                        <div className="text-white/80 text-sm font-mono">{animatedRating}/100</div>
-
-                                        {/* Progress Bar */}
-                                        <div className="w-24 bg-white/20 rounded-full h-1.5 mt-1">
-                                            <motion.div
-                                                className="bg-white rounded-full h-1.5"
-                                                initial={{ width: 0 }}
-                                                animate={{ width: `${animatedRating}%` }}
-                                                transition={{ duration: 2, delay: index * 0.2 }}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
+                                </AnimatePresence>
                             </motion.div>
                         )
                     })}

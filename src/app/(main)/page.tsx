@@ -52,7 +52,7 @@ export default function Home() {
 
             <Hero headline="Impulsa tu negocio con páginas web que venden." subheadline="Diseño y desarrollo web.
 E-commerce seguro y eficiente: vende 24/7 con confianza.
-Software a medida: automatiza y crece tu empresa." cta1="Obten tu Sitio Web" />
+Software a medida: automatiza y crece tu empresa." cta1="Obtén tu Sitio Web" />
             <How title={howData.title} subtitle={howData.subtitle} />
             <Proyectos />
             <Pasos />

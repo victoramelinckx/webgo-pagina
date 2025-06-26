@@ -64,10 +64,10 @@ export default function Carta9() {
     }
 
     return (
-        <div ref={ref} className="bg-white rounded-[2rem] p-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
+        <div ref={ref} className="bg-white rounded-[2rem] py-14 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
             <div className="relative z-10">
                 {/* Header */}
-                <h3 className="text-3xl md:text-[56px] font-bold mb-6 leading-none text-black">
+                <h3 className="text-[40px]  md:text-[56px] font-bold mb-6 leading-none text-black">
                     Garantía Total.
                     <br />
                     <span className="text-gray-500 md:text-[36px] leading-none">Tranquilidad absoluta.</span>

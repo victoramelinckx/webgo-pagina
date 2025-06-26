@@ -46,7 +46,7 @@ export default function CartaCTA() {
     return (
         <motion.div
             ref={ref}
-            className="bg-black rounded-[2rem] p-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl"
+            className="bg-black rounded-[2rem] py-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl"
             initial="hidden"
             animate={controls}
             variants={containerVariants}
@@ -62,7 +62,7 @@ export default function CartaCTA() {
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <img src="/webgo-logo-blanco.png" alt="webgo" className="w-20 h-auto" />
                     </div>
-                    <h3 className="text-3xl md:text-[56px] font-bold mb-4 leading-none text-white">Transforma tu negocio.</h3>
+                    <h3 className="text-[40px]  md:text-[56px] font-bold mb-4 leading-none text-white">Transforma tu negocio.</h3>
                     <p className="text-white/80 text-xl font-medium max-w-2xl mx-auto">
                         Únete a más de 500 empresas que ya están creciendo con nuestras soluciones.
                     </p>
