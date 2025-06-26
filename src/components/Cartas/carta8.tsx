@@ -44,7 +44,7 @@ const landingTemplates = [
 
 export default function Carta8() {
     return (
-        <div className="md:col-span-2 bg-white rounded-[2rem] inset-shadow-xl min-h-[600px] py-14 px-8 md:p-0 md:pb-[70px] relative overflow-hidden shadow-xl">
+        <div className="md:col-span-2 bg-white rounded-[2rem] inset-shadow-xl min-h-[600px] pt-14 pb-20 px-8 md:p-0 md:pb-[70px] relative overflow-hidden shadow-xl">
             <div className="h-full flex flex-col ">
 
 

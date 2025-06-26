@@ -23,7 +23,7 @@ const WalgreensLogo = () => <div className="h-5 w-auto text-xs font-bold">Walgre
 
 export default function Carta4() {
     return (
-        <div className="bg-white rounded-[2rem] py-14 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
+        <div className="bg-white rounded-[2rem] pt-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
             <h3 className="text-[40px]  md:text-5xl font-bold mb-6 leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#6D80BE] to-[#00DB71]">
                 Tecnología de vanguardia en cada proyecto.
                 <br />

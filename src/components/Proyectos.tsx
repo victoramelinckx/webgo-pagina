@@ -105,10 +105,10 @@ export const Proyectos = () => {
     }, [api])
 
     return (
-        <Element name="proyectos" className="w-full bg-gray-100 py-20 sm:py-10">
+        <Element name="proyectos" className="w-full bg-black py-20 sm:py-10">
             <div className="w-full px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">
+                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
                         Proyectos que hacen crecer negocios
                     </h2>
                 </div>
@@ -129,7 +129,7 @@ export const Proyectos = () => {
                                     <div className="group cursor-pointer">
                                         <div className="relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500">
                                             {/* Image Container with 16:9 Aspect Ratio */}
-                                            <div className="relative w-full aspect-video overflow-hidden">
+                                            <div className="relative w-full aspect-[9/16] md:aspect-video overflow-hidden">
                                                 <img
                                                     src={project.image || "/placeholder.svg"}
                                                     alt={project.title}
