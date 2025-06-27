@@ -2,23 +2,17 @@
 
 import { Link as ScrollLink } from "react-scroll"
 import { Button } from "@/components/ui/Button"
-import { type Dispatch, type ReactNode, type SetStateAction, useEffect, useState } from "react"
+import { type Dispatch, type ReactNode, type SetStateAction, useEffect, useState, useRef } from "react"
 import { Menu, X, Globe, ShoppingCart } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
 
 export const Navbar = ({ displayMode }: { displayMode?: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrollNav, setScrollNav] = useState(false)
+  const [showStickyNav, setShowStickyNav] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const lastScrollY = useRef(0)
   const pathname = usePathname()
   const router = useRouter()
-
-  const changeNav = () => {
-    if (window.scrollY >= 96) {
-      setScrollNav(true)
-    } else {
-      setScrollNav(false)
-    }
-  }
 
   const toggleHome = () => {
     if (pathname === "/" || pathname === "/index") {
@@ -32,9 +26,36 @@ export const Navbar = ({ displayMode }: { displayMode?: string }) => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNav)
-    return () => window.removeEventListener("scroll", changeNav)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024) // Tailwind's 'lg' breakpoint
+    }
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      const scrollThreshold = 96
+
+      if (isMobile) {
+        // On mobile, show on scroll up past a threshold, hide on scroll down
+        if (currentScrollY < lastScrollY.current && currentScrollY > scrollThreshold) {
+          setShowStickyNav(true)
+        } else {
+          setShowStickyNav(false)
+        }
+      } else {
+        // On desktop, show when scrolled past threshold
+        setShowStickyNav(currentScrollY >= scrollThreshold)
+      }
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [isMobile])
 
   return (
     <>
@@ -51,7 +72,7 @@ export const Navbar = ({ displayMode }: { displayMode?: string }) => {
       )}
 
       {/* Sticky Navbar on Scroll - Also white */}
-      <NavbarScroll className={`${displayMode ? "top-0" : scrollNav ? "top-0" : "-top-[4.5rem]"}`}>
+      <NavbarScroll className={`${displayMode ? "top-0" : showStickyNav ? "top-0" : "-top-[4.5rem]"}`}>
         <NavbarContent
           isScrollNav={true}
           toggleHome={toggleHome}
@@ -61,7 +82,7 @@ export const Navbar = ({ displayMode }: { displayMode?: string }) => {
       </NavbarScroll>
 
       {/* Mobile Menu */}
-      <MobileNavbarContent scrollNav={scrollNav} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <MobileNavbarContent isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </>
   )
 }
@@ -79,7 +100,7 @@ const NavbarScroll = ({
 }) => {
   return (
     <nav
-      className={`sticky z-50 flex justify-center items-center transition-all duration-700 w-full bg-white/80 backdrop-blur-xl border-b border-slate-900/10 h-[4.5rem] -mt-[4.5rem] ${className}`}
+      className={`sticky z-50 flex justify-center items-center transition-all duration-700 w-full bg-white/60 backdrop-blur-xl border-b border-slate-900/10 h-[3.8rem] -mt-[3.8rem] ${className}`}
     >
       {children}
     </nav>
@@ -139,7 +160,6 @@ const NavbarContent = ({
             </Button>
           </ScrollLink>
 
-
           {/* Mobile Menu Button */}
           <button className="lg:hidden text-black" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -151,11 +171,9 @@ const NavbarContent = ({
 }
 
 const MobileNavbarContent = ({
-  scrollNav,
   isMenuOpen,
   setIsMenuOpen,
 }: {
-  scrollNav: boolean
   isMenuOpen: boolean
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>
 }) => {

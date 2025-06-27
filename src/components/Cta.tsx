@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"
 
 export default function Cta() {
     const [scrollProgress, setScrollProgress] = useState(0)
@@ -151,7 +152,26 @@ export default function Cta() {
                 </div>
             </div>
 
-
+            <div className="absolute bottom-0 left-0 right-0 max-w-6xl mx-auto px-8 pb-2">
+                {/* Bottom Section */}
+                <div className="flex flex-col md:flex-row justify-between items-center py-2 ">
+                    <p className="text-gray-900 font-semibold text-sm mb-4 md:mb-0">
+                        © {new Date().getFullYear()} Derechos reservados.
+                    </p>
+                    {/* <img src="/Webgo-logo.webp" alt="Logo Opencode" className="w-28 h-auto" /> */}
+                    <div className="flex space-x-6">
+                        <a href="https://facebook.com">
+                            <FaInstagram className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
+                        </a>
+                        <a href="https://facebook.com">
+                            <FaFacebook className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
+                        </a>
+                        <a href="https://facebook.com">
+                            <FaYoutube className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }

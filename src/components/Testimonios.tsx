@@ -242,8 +242,8 @@ export default function TestimonialsSection() {
     const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3)
 
     // Split testimonials into columns for different parallax speeds
-    const column1 = testimonials.slice(3, 6)
-    const column2 = testimonials.slice(0, 3)
+    const column1 = testimonials.slice(0, 3)
+    const column2 = testimonials.slice(3, 6)
     const column3 = testimonials.slice(6, 9)
 
     return (
@@ -295,7 +295,7 @@ export default function TestimonialsSection() {
                         <div
                             className="space-y-2"
                             style={{
-                                transform: `translateY(${-scrollY * 0.15 * easeOutCubic(Math.min(scrollY / 1000, 1))}px)`,
+                                transform: `translateY(${-scrollY * 0.25 * easeOutCubic(Math.min(scrollY / 1000, 1))}px)`,
                                 transition: "transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
                             }}
                         >
@@ -312,7 +312,7 @@ export default function TestimonialsSection() {
                         <div
                             className="space-y-2"
                             style={{
-                                transform: `translateY(${-scrollY * 0.25 * easeOutCubic(Math.min(scrollY / 1000, 1))}px)`,
+                                transform: `translateY(${-scrollY * 0.15 * easeOutCubic(Math.min(scrollY / 1000, 1))}px)`,
                                 transition: "transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
                             }}
                         >
@@ -329,7 +329,7 @@ export default function TestimonialsSection() {
                         <div
                             className="space-y-2"
                             style={{
-                                transform: `translateY(${-scrollY * 0.35 * easeOutCubic(Math.min(scrollY / 1000, 1))}px)`,
+                                transform: `translateY(${-scrollY * 0.32 * easeOutCubic(Math.min(scrollY / 1000, 1))}px)`,
                                 transition: "transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
                             }}
                         >

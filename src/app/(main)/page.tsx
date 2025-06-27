@@ -64,7 +64,7 @@ Software a medida: automatiza y crece tu empresa." cta1="Obtén tu Sitio Web" />
             <Faq faqs={faqs} />
             <TestimonialsSection />
             <Cta />
-            <Footer />
+            {/* <Footer /> */}
         </main>
     );
 } 
