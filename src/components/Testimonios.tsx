@@ -242,8 +242,8 @@ export default function TestimonialsSection() {
     const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3)
 
     // Split testimonials into columns for different parallax speeds
-    const column1 = testimonials.slice(0, 3)
-    const column2 = testimonials.slice(3, 6)
+    const column1 = testimonials.slice(3, 6)
+    const column2 = testimonials.slice(0, 3)
     const column3 = testimonials.slice(6, 9)
 
     return (
