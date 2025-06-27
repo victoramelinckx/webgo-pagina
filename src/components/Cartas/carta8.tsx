@@ -1,44 +1,62 @@
 "use client"
 
-import { Plus } from "lucide-react"
+import { Plus, ChevronRight } from "lucide-react"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/Carousel"
 
 const landingTemplates = [
     {
         id: 1,
-        title: "E-commerce Premium",
-        background: "bg-gradient-to-br from-blue-500 to-purple-600",
+        title: "Kluxur",
+        background: "bg-gradient-to-br from-gray-700 to-gray-900",
         image: "/kluxur.png?height=420&width=280",
     },
     {
         id: 2,
-        title: "SaaS Moderno",
-        background: "bg-gradient-to-br from-green-500 to-teal-600",
-        image: "/kluxur.png?height=420&width=280",
+        title: "Oakore",
+        background: "bg-gradient-to-br from-blue-500 to-purple-600",
+        image: "/oak-web.webp?height=420&width=280",
     },
     {
         id: 3,
-        title: "Restaurante Gourmet",
-        background: "bg-gradient-to-br from-orange-500 to-red-600",
-        image: "/kluxur.png?height=420&width=280",
+        title: "You",
+        background: "bg-gradient-to-br from-green-400 to-blue-500",
+        image: "/you-web.webp?height=420&width=280",
     },
     {
         id: 4,
-        title: "Fitness Studio",
-        background: "bg-gradient-to-br from-pink-500 to-rose-600",
-        image: "/kluxur.png?height=420&width=280",
+        title: "ECC",
+        background: "bg-gradient-to-br from-pink-500 to-rose-500",
+        image: "/ecc-web.webp?height=420&width=280",
     },
     {
         id: 5,
-        title: "Consultoría Pro",
-        background: "bg-gradient-to-br from-indigo-500 to-purple-600",
-        image: "/kluxur.png?height=420&width=280",
+        title: "JD",
+        background: "bg-gradient-to-br from-orange-400 to-red-500",
+        image: "/jd-web.webp?height=420&width=280",
     },
     {
-        id: 5,
-        title: "Consultoría Pro",
+        id: 6,
+        title: "Galindo",
+        background: "bg-gradient-to-br from-teal-400 to-cyan-600",
+        image: "/galindo-web.webp?height=420&width=280",
+    },
+    {
+        id: 7,
+        title: "JDenx",
         background: "bg-gradient-to-br from-indigo-500 to-purple-600",
-        image: "/kluxur.png?height=420&width=280",
+        image: "/jdenx-web.webp?height=420&width=280",
+    },
+    {
+        id: 8,
+        title: "Hyperion",
+        background: "bg-gradient-to-br from-indigo-500 to-purple-600",
+        image: "/hyperion-web.webp?height=420&width=280",
+    },
+    {
+        id: 9,
+        title: "SweetHomes",
+        background: "bg-gradient-to-br from-indigo-500 to-purple-600",
+        image: "/sweethomes-web.webp?height=420&width=280",
     },
 ]
 
@@ -65,6 +83,7 @@ export default function Carta8() {
                             opts={{
                                 align: "center",
                                 loop: true,
+                                dragFree: true,
                             }}
                         >
                             <CarouselContent className=" -ml-4 space-x-2">

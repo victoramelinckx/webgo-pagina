@@ -54,12 +54,15 @@ export default function Home() {
 E-commerce seguro y eficiente: vende 24/7 con confianza.
 Software a medida: automatiza y crece tu empresa." cta1="Obtén tu Sitio Web" />
             <How title={howData.title} subtitle={howData.subtitle} />
-            <Proyectos />
-            <Pasos />
-            <Precios />
             <VideosTestimonios />
-            <TestimonialsSection />
+
+            <Pasos />
+            <Proyectos />
+            <Precios />
+
+
             <Faq faqs={faqs} />
+            <TestimonialsSection />
             <Cta />
             <Footer />
         </main>

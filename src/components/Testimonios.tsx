@@ -142,7 +142,7 @@ function TestimonialCard({
         >
             {/* Multiple glass effect layers */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/40 via-white/20 to-transparent pointer-events-none" />
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tl from-blue-500/8 via-transparent to-purple-500/8 pointer-events-none" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tl from-pink-300/8 via-transparent to-orange-300/8 pointer-events-none" />
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
 
             {/* Noise texture overlay for realistic glass */}
@@ -159,11 +159,11 @@ function TestimonialCard({
                 style={{
                     background: `
             linear-gradient(45deg, 
-              rgba(59, 130, 246, 0.3) 0%,
-              rgba(147, 51, 234, 0.3) 25%,
-              rgba(236, 72, 153, 0.3) 50%,
-              rgba(59, 130, 246, 0.3) 75%,
-              rgba(147, 51, 234, 0.3) 100%
+              rgba(233, 188, 242, 0.3) 0%,
+              rgba(254, 196, 154, 0.3) 25%,
+              rgba(248, 183, 197, 0.3) 50%,
+              rgba(233, 188, 242, 0.3) 75%,
+              rgba(254, 196, 154, 0.3) 100%
             )
           `,
                     backgroundSize: "400% 400%",
@@ -185,7 +185,7 @@ function TestimonialCard({
 
                 <div className="flex items-center gap-3">
                     <div className="relative">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20 blur-sm group-hover:blur-none transition-all duration-300" />
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-400/20 to-orange-400/20 blur-sm group-hover:blur-none transition-all duration-300" />
                         <Image
                             src={testimonial.author.avatar || "/placeholder.svg"}
                             alt={testimonial.author.name}
@@ -207,7 +207,7 @@ function TestimonialCard({
             </div>
 
             {/* Hover glow effect */}
-            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 transition-all duration-700 pointer-events-none blur-xl" />
+            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 bg-gradient-to-r from-pink-300/5 via-orange-300/5 to-yellow-300/5 transition-all duration-700 pointer-events-none blur-xl" />
         </div>
     )
 }
@@ -258,25 +258,25 @@ export default function TestimonialsSection() {
 
             <section
                 ref={sectionRef}
-                className="pt-20 px-4 relative overflow-hidden min-h-screen"
+                className="pt-20 px-4 relative overflow-hidden -mb-40"
                 style={{
                     background: `
-            radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 70%),
-            linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%)
+            radial-gradient(circle at 20% 30%, rgba(233, 188, 242, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(254, 196, 154, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(209, 240, 188, 0.05) 0%, transparent 70%),
+            linear-gradient(135deg, #fdfbff 0%, #f9f9f9 50%, #f3f4f6 100%)
           `,
                 }}
             >
                 {/* Enhanced animated background elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl animate-pulse" />
+                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-200/5 rounded-full blur-3xl animate-pulse" />
                     <div
-                        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse"
+                        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-200/5 rounded-full blur-3xl animate-pulse"
                         style={{ animationDelay: "1s" }}
                     />
                     <div
-                        className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-400/5 rounded-full blur-3xl animate-pulse"
+                        className="absolute top-1/2 left-1/2 w-64 h-64 bg-green-200/5 rounded-full blur-3xl animate-pulse"
                         style={{ animationDelay: "2s" }}
                     />
                 </div>

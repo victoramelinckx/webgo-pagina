@@ -128,7 +128,7 @@ export default function Cta() {
                 }}
             />
 
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-3xl mx-auto pt-20 px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex justify-center mb-0">
                     <Image src="/webgo.webp" alt="WebGo Logo" width={140} height={40} quality={100} />
                 </div>

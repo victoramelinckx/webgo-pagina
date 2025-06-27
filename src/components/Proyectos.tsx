@@ -18,6 +18,7 @@ const projects = [
         title: "Oakore",
         description: "E-commerce de muebles premium con diseño minimalista",
         image: "/oakore1.webp?height=720&width=1280",
+        mobileImage: "/oak-web.webp?height=1280&width=720",
         category: "E-commerce",
     },
     {
@@ -29,9 +30,10 @@ const projects = [
     },
     {
         id: 3,
-        title: "You Glow",
+        title: "You",
         description: "Plataforma para negocio de salud y belleza en Miami.",
         image: "/you.webp?height=720&width=1280",
+        mobileImage: "/you-web.webp?height=1280&width=720",
         category: "Salud y Belleza",
     },
     {
@@ -39,6 +41,7 @@ const projects = [
         title: "ECC",
         description: "Sitio Web para clinica pediatra en Miami.",
         image: "/ecc.webp?height=720&width=1280",
+        mobileImage: "/ecc-web.webp?height=1280&width=720",
         category: "Salud",
     },
     {
@@ -46,6 +49,7 @@ const projects = [
         title: "JD",
         description: "E-commerce de productos de baños en Miami.",
         image: "/jd.webp?height=720&width=1280",
+        mobileImage: "/jd-web.webp?height=1280&width=720",
         category: "Hogar",
     },
     {
@@ -60,6 +64,7 @@ const projects = [
         title: "Galindo",
         description: "Sitio Web para odontología en Chile.",
         image: "/galindo.webp?height=720&width=1280",
+        mobileImage: "/galindo-web.webp?height=1280&width=720",
         category: "Odontología",
     },
     {
@@ -71,9 +76,17 @@ const projects = [
     },
     {
         id: 9,
+        title: "SweetHomes",
+        description: "Sitio Web para empresa de inmobiliaria en Miami.",
+        image: "/sweethomes.webp?height=720&width=1280",
+        category: "Inmobiliaria",
+    },
+    {
+        id: 10,
         title: "JDenx",
         description: "Sitio Web para el mejor plomero de Miami.",
         image: "/jdenx.webp?height=720&width=1280",
+        mobileImage: "/jdenx-web.webp?height=1280&width=720",
         category: "Hogar",
     },
     {
@@ -90,22 +103,38 @@ export const Proyectos = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            setIsMobile(window.innerWidth < 768) // Tailwind's 'md' breakpoint
+        }
+
+        checkIsMobile()
+        window.addEventListener("resize", checkIsMobile)
+
+        return () => window.removeEventListener("resize", checkIsMobile)
+    }, [])
+
+    const displayedProjects = isMobile
+        ? projects.filter(p => p.mobileImage)
+        : projects
 
     useEffect(() => {
         if (!api) {
             return
         }
 
-        setCount(api.scrollSnapList().length)
+        setCount(displayedProjects.length)
         setCurrent(api.selectedScrollSnap() + 1)
 
         api.on("select", () => {
             setCurrent(api.selectedScrollSnap() + 1)
         })
-    }, [api])
+    }, [api, displayedProjects])
 
     return (
-        <Element name="proyectos" className="w-full bg-black py-20 sm:py-10">
+        <Element name="proyectos" className="hidden md:block w-full bg-black py-20 sm:py-10">
             <div className="w-full px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
@@ -124,16 +153,16 @@ export const Proyectos = () => {
                         className="w-full"
                     >
                         <CarouselContent className="-ml-4 pb-10">
-                            {projects.map((project, index) => (
+                            {displayedProjects.map((project, index) => (
                                 <CarouselItem key={project.id} className="pl-4 basis-[85%] md:basis-[75%] lg:basis-[800px]">
-                                    <div className="group cursor-pointer">
+                                    <div className="group cursor-grab active:cursor-grabbing">
                                         <div className="relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500">
                                             {/* Image Container with 16:9 Aspect Ratio */}
                                             <div className="relative w-full aspect-[9/16] md:aspect-video overflow-hidden">
                                                 <img
-                                                    src={project.image || "/placeholder.svg"}
+                                                    src={isMobile ? project.mobileImage : project.image || "/placeholder.svg"}
                                                     alt={project.title}
-                                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                    className="w-full h-full object-cover"
                                                 />
 
 
