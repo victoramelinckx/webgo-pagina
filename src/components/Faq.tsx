@@ -22,12 +22,12 @@ interface FaqProps {
 // Update the component to accept faqs as a prop with a default empty array
 export const Faq: React.FC<FaqProps> = ({ faqs = [] }) => {
   return (
-    <section className="flex flex-col w-full justify-center items-center bg-black">
+    <section className="flex flex-col w-full justify-center items-center bg-black py-10">
       <div className="flex flex-col w-full lg:w-11/12 max-w-6xl lg:py-10 max-md:px-5 md:max-lg:px-12 gap-6">
         <section className="flex flex-col lg:flex-row justify-center lg:items-stretch items-center py-10 max-h-max-[700px] gap-8 lg:gap-12 max-w-6xl">
           <div className="w-full lg:w-1/2 h-full flex flex-col lg:sticky lg:top-24">
-            <div className="max-w-3xl mx-auto text-center mb-10">
-              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
+            <div className="max-w-3xl mx-auto text-center mb-6">
+              <h2 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
                 Preguntas? Respuestas.
               </h2>
             </div>
@@ -35,7 +35,7 @@ export const Faq: React.FC<FaqProps> = ({ faqs = [] }) => {
           </div>
           <div className="w-full lg:w-1/2 flex">
             <Accordion className="w-full" type="single" collapsible>
-              <div className="h-px w-full border-b border-white px-8" />
+              <div className="h-px w-full border-b border-white/50 px-8" />
               {faqs.map((item, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger className="font-semibold text-base text-left md:text-xl p-6 text-white">

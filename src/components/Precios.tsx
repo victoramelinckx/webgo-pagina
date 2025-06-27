@@ -141,7 +141,7 @@ export default function Precios() {
     }
 
     return (
-        <section className="py-10 px-4 bg-gray-100">
+        <section className="pt-0 pb-10 md:py-10 px-4 bg-gray-100">
             <TooltipProvider>
                 <div className="max-w-5xl mx-auto">
                     {/* Header */}

@@ -284,7 +284,7 @@ export default function TestimonialsSection() {
                 <div className="max-w-5xl mx-auto relative z-10">
                     {/* Enhanced Header */}
                     <div className="max-w-3xl mx-auto text-center mb-32">
-                        <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">
+                        <h2 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
                             Clientes felices.
                         </h2>
                     </div>
