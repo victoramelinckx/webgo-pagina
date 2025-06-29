@@ -51,13 +51,14 @@ export const YouTubePlayer = ({ videoId, thumbnail }: YouTubePlayerProps) => {
                         onClick={handlePlay}
                     >
                         <Image
-                            src={"/vacio.jpg"}
+                            src={"/webgo-vsl.jpeg"}
                             alt="Video thumbnail"
-                            layout="fill"
-                            objectFit="cover"
+                            width={500}
+                            height={500}
+                            className="object-cover w-full h-full"
                             priority
                         />
-                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
                             <div className="w-20 h-20 bg-white/30 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white/50 transition-colors duration-300">
                                 <Play className="w-10 h-10 text-white" fill="white" />
                             </div>

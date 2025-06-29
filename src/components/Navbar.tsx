@@ -88,7 +88,7 @@ export const Navbar = ({ displayMode }: { displayMode?: string }) => {
 }
 
 const NavbarTop = ({ children }: { children: ReactNode }) => {
-  return <nav className="w-full bg-white h-16 flex items-center mt-1">{children}</nav>
+  return <nav className="w-full bg-white h-16 flex items-center">{children}</nav>
 }
 
 const NavbarScroll = ({
