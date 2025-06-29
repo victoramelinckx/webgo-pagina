@@ -83,13 +83,15 @@ export default function VideosTestimonios() {
                 <Carousel
                     className="w-full"
                     opts={{
-                        align: "start",
+                        align: "center",
                         loop: true,
                         skipSnaps: false,
                         dragFree: true,
+                        containScroll: "trimSnaps",
                     }}
+
                 >
-                    <CarouselContent className="-ml-4">
+                    <CarouselContent className="-ml-4" >
                         {TESTIMONIALS.map((testimonial) => (
                             <CarouselItem key={testimonial.id} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                                 <VideoCard

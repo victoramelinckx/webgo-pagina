@@ -1,5 +1,5 @@
 "use client"
-
+import Autoplay from "embla-carousel-autoplay"
 import { Plus, ChevronRight } from "lucide-react"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/Carousel"
 
@@ -77,20 +77,26 @@ export default function Carta8() {
 
                 {/* Perfect Carousel - Matching Apple's Layout */}
                 <div className="flex-1 flex items-center justify-center">
-                    <div className="w-full max-w-6xl ml-2 overflow-hidden">
+                    <div className="w-full max-w-6xl mx-2 overflow-hidden">
                         <Carousel
                             className="w-full"
+                            plugins={[
+                                Autoplay({
+                                    delay: 2000,
+                                }),
+                            ]}
                             opts={{
                                 align: "center",
                                 loop: true,
                                 dragFree: true,
+
                             }}
                         >
                             <CarouselContent className=" -ml-4 space-x-2">
                                 {landingTemplates.map((template) => (
                                     <CarouselItem key={template.id} className="pl-4 basis-[200px] flex-shrink-0 mr-4 py-4">
                                         <div className="group cursor-pointer">
-                                            <div className="rounded-3xl border-2 border-black  w-[200px] aspect-[9/16] relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]">
+                                            <div className="rounded-3xl border-1 border-black  w-[200px] aspect-[9/16] relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]">
                                                 {/* Background Image */}
                                                 <div className={`absolute inset-0 ${template.background}`}>
                                                     <img

@@ -86,9 +86,30 @@ export default function Carta9() {
                         return (
                             <motion.div
                                 key={index}
-                                className="bg-white/40 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-sm hover:bg-white/50 transition-all duration-300"
+                                className=" rounded-xl p-4 border border-white/20 shadow-sm hover:bg-white/50 transition-all duration-300"
                                 variants={itemVariants}
+                                style={{
+                                    backdropFilter: "blur(25px) saturate(200%) contrast(120%)",
+                                    WebkitBackdropFilter: "blur(25px) saturate(200%) contrast(120%)",
+                                    background: `
+                              linear-gradient(135deg, 
+                                rgba(255, 255, 255, 0.25) 0%,
+                                rgba(255, 255, 255, 0.15) 50%,
+                                rgba(255, 255, 255, 0.05) 100%
+                              )
+                            `,
+                                    border: "1px solid rgba(255, 255, 255, 0.4)",
+                                    boxShadow: `
+                              0 20px 40px rgba(0, 0, 0, 0.1),
+                              0 8px 16px rgba(0, 0, 0, 0.06),
+                              inset 0 2px 0 rgba(255, 255, 255, 0.6),
+                              inset 0 -2px 0 rgba(255, 255, 255, 0.1),
+                              inset 2px 0 0 rgba(255, 255, 255, 0.2),
+                              inset -2px 0 0 rgba(255, 255, 255, 0.1)
+                            `,
+                                }}
                             >
+
                                 <div className="flex items-center gap-3 mb-2">
                                     <div
                                         className={`w-6 h-6 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center`}
