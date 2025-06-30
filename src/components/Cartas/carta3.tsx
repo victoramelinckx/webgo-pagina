@@ -35,7 +35,7 @@ export default function Carta3() {
     return (
         <div ref={ref} className="bg-white rounded-[2rem] pt-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
             <h3 className="text-[40px]  md:text-5xl font-bold mb-6 leading-none text-black">
-                Entrega garantizada en 14 días.
+                Entrega garantizada en 7 días.
                 <br />
                 <span className="text-gray-500">Sin fechas que se pierden.</span>
             </h3>
@@ -53,7 +53,7 @@ export default function Carta3() {
                     {/* Número del día con animación suave */}
                     <div className={`
                         text-7xl font-bold transition-all duration-200 ease-out
-                        ${currentDay === 14 ? 'text-black scale-105' : 'text-black scale-100'}
+                        ${currentDay === 7 ? 'text-black scale-105' : 'text-black scale-100'}
                     `}>
                         {currentDay}
                     </div>
@@ -64,10 +64,10 @@ export default function Carta3() {
                             <div
                                 className={`
                                     h-1 rounded-full transition-all duration-200 ease-out
-                                    ${currentDay === 14 ? 'bg-green-500' : 'bg-red-500'}
+                                    ${currentDay === 7 ? 'bg-green-500' : 'bg-red-500'}
                                 `}
                                 style={{
-                                    width: `${(currentDay / 14) * 100}%`,
+                                    width: `${(currentDay / 7) * 100}%`,
                                     transition: 'width 200ms ease-out, background-color 300ms ease-out'
                                 }}
                             ></div>
@@ -80,9 +80,9 @@ export default function Carta3() {
             <div className="text-center mt-2">
                 <div className={`
                     text-base font-medium transition-colors duration-300
-                    ${currentDay === 14 ? 'text-green-600' : 'text-gray-600'}
+                    ${currentDay === 7 ? 'text-green-600' : 'text-gray-600'}
                 `}>
-                    {currentDay === 14 ? '¡Proyecto completado!' : `Desarrollando día ${currentDay}...`}
+                    {currentDay === 7 ? '¡Proyecto completado!' : `Desarrollando día ${currentDay}...`}
                 </div>
             </div>
             <div className="absolute bottom-8 right-8 w-8 h-8 bg-black rounded-full flex items-center justify-center">
