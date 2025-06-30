@@ -141,13 +141,13 @@ const NavbarContent = ({
             ¿Cómo Trabajamos?
           </ScrollLink>
           <ScrollLink
-            to="planes"
+            to="precios"
             smooth
             spy
             offset={-72}
             className="text-black hover:text-gray-600 cursor-pointer transition-colors font-medium"
           >
-            Planes
+            Precios
           </ScrollLink>
         </div>
 

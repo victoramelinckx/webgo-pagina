@@ -67,7 +67,7 @@ export const CartaSeguridad = () => {
 
                     {/* Logo */}
                     <img
-                        src="/webgo-logo-blanco.png"
+                        src="/logo-blanco-hd.png"
                         alt="shield"
                         className={`w-40 h-auto mx-auto transition-all duration-800 delay-500 ${isAnimated ? "opacity-100 transform translate-y-0" : "opacity-70 transform translate-y-2"
                             }`}
