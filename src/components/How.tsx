@@ -59,7 +59,6 @@ export const How = ({ title, subtitle }: HowProps) => {
           {/* Row 6: Garantía */}
           <Carta9 />
 
-
           {/* Row 6: Rendimiento */}
           <Carta10 />
 

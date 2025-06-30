@@ -179,13 +179,9 @@ export const Proyectos = () => {
                         </CarouselContent>
 
                         {/* Navigation Buttons - Bottom Right */}
-                        <div className="absolute -bottom-16 right-16 flex gap-2 z-10">
-                            <CarouselPrevious className="relative inset-auto translate-y-0 hover:cursor-pointer translate-x-0 bg-white/90 backdrop-blur-sm border border-gray-200/50 hover:bg-white shadow-lg">
-                                <ChevronLeft className="h-4 w-4 text-gray-600" />
-                            </CarouselPrevious>
-                            <CarouselNext className="relative inset-auto translate-y-0 hover:cursor-pointer translate-x-0 bg-white/90 backdrop-blur-sm border border-gray-200/50 hover:bg-white shadow-lg">
-                                <ChevronRight className="h-4 w-4 text-gray-600" />
-                            </CarouselNext>
+                        <div className="absolute -bottom-5 right-20 flex gap-2 z-10">
+                            <CarouselPrevious className="relative inset-auto translate-y-0 hover:cursor-pointer translate-x-0 bg-black text-white hover:bg-gray-100/50" />
+                            <CarouselNext className="relative inset-auto translate-y-0 hover:cursor-pointer translate-x-0 bg-black text-white hover:bg-gray-100/50 " />
                         </div>
                     </Carousel>
 

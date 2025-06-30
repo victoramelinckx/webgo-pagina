@@ -105,8 +105,8 @@ export default function VideosTestimonios() {
                     </CarouselContent>
 
                     <div className="flex justify-center mt-8 gap-4">
-                        <CarouselPrevious className="relative left-0 top-0 translate-y-0 text-black  bg-white hover:bg-gray-50  border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl transition-all duration-300 " />
-                        <CarouselNext className="relative right-0 top-0 translate-y-0 text-black bg-white hover:bg-gray-50 border-1 border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl transition-all duration-300" />
+                        <CarouselPrevious className="relative left-0 top-0 translate-y-0 bg-black text-white hover:bg-gray-100/50" />
+                        <CarouselNext className="relative right-0 top-0 translate-y-0 bg-black text-white hover:bg-gray-100/50" />
                     </div>
                 </Carousel>
             </div>
