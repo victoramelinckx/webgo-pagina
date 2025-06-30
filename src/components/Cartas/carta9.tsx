@@ -64,7 +64,7 @@ export default function Carta9() {
     }
 
     return (
-        <div ref={ref} className="bg-white rounded-[2rem] pt-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl">
+        <div ref={ref} className="bg-white rounded-[2rem] pt-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl h-full">
             <div className="relative z-10">
                 {/* Header */}
                 <h3 className="text-[40px]  md:text-[56px] font-bold mb-6 leading-none text-black">

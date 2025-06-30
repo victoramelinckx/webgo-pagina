@@ -14,15 +14,15 @@ export default function Carta3() {
     useEffect(() => {
         if (inView && !hasAnimated) {
             const totalDuration = 3000 // 3 segundos total
-            const steps = 13 // de 1 a 14 (13 incrementos)
+            const steps = 6 // de 1 a 14 (13 incrementos)
             const stepDuration = totalDuration / steps // ~230ms por paso
 
             const interval = setInterval(() => {
                 setCurrentDay(prev => {
-                    if (prev >= 14) {
+                    if (prev >= 7) {
                         clearInterval(interval)
                         setHasAnimated(true)
-                        return 14
+                        return 7
                     }
                     return prev + 1
                 })

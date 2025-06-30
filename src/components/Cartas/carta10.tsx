@@ -110,7 +110,7 @@ export default function Carta10() {
     return (
         <div
             ref={ref}
-            className="bg-gradient-to-br from-blue-500/80 to-green-500/80 rounded-[2rem] py-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl"
+            className="bg-gradient-to-br from-blue-500/80 to-green-500/80 rounded-[2rem] py-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl h-full"
         >
             <div className="relative z-10">
                 {/* Header */}

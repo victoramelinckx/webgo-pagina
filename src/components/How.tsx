@@ -1,6 +1,9 @@
 // components/How.tsx
 "use client";
 import { Element } from "react-scroll";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import Carta1 from "./Cartas/carta1";
 import Carta2 from "./Cartas/carta2";
 import Carta3 from "./Cartas/carta3";
@@ -20,6 +23,14 @@ interface HowProps {
 }
 
 export const How = ({ title, subtitle }: HowProps) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const cardAnimation = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5, ease: "easeOut" },
+  };
+
   return (
     <Element name="como-trabajamos" className="w-full bg-gray-100 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +58,6 @@ export const How = ({ title, subtitle }: HowProps) => {
           {/* Row 4: Lead Capture */}
           <Carta7 />
 
-
           {/* Row 4: Chat */}
           <Carta5 />
 
@@ -59,12 +69,32 @@ export const How = ({ title, subtitle }: HowProps) => {
           {/* Row 6: Garantía */}
           <Carta9 />
 
-          {/* Row 6: Rendimiento */}
-          <Carta10 />
-
-          {/* Row 6: CTA */}
-          <CartaCTA />
+          <AnimatePresence>
+            {showAll && (
+              <>
+                <motion.div {...cardAnimation}>
+                  <Carta10 />
+                </motion.div>
+                <motion.div {...cardAnimation}>
+                  <CartaCTA />
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
         </div>
+
+        {!showAll && (
+          <div className="flex items-center justify-center mt-8">
+            <div className="border-t border-gray-300 flex-grow"></div>
+            <button
+              onClick={() => setShowAll(true)}
+              className="text-xs hover:cursor-pointer text-gray-800 hover:text-black mx-4 flex items-center gap-1"
+            >
+              Mostrar más <ChevronDown className="w-3 h-3" />
+            </button>
+            <div className="border-t border-gray-300 flex-grow"></div>
+          </div>
+        )}
       </div>
     </Element>
   );

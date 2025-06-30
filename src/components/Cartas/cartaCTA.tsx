@@ -46,7 +46,7 @@ export default function CartaCTA() {
     return (
         <motion.div
             ref={ref}
-            className="bg-black rounded-[2rem] py-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl"
+            className="bg-black rounded-[2rem] py-14 pb-20 px-8 md:py-[90px] md:px-[80px] relative overflow-hidden shadow-xl h-full"
             initial="hidden"
             animate={controls}
             variants={containerVariants}
