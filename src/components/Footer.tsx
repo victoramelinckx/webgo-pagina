@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 interface FooterLink {
   label: string;
@@ -48,14 +49,14 @@ export const Footer = () => {
           </p>
           <img src="/Webgo-logo.webp" alt="Logo Opencode" className="w-28 h-auto" />
           <div className="flex space-x-6">
-            <a href="https://facebook.com">
+            <a href="https://www.instagram.com/webgo.cl">
               <FaInstagram className="w-6 h-6 text-[#1C1C1C99] transition-all ease-out hover:text-primary-500" />
             </a>
-            <a href="https://facebook.com">
-              <FaFacebook className="w-6 h-6 text-[#1C1C1C99] transition-all ease-out hover:text-primary-500" />
-            </a>
-            <a href="https://facebook.com">
+            <a href="https://www.youtube.com/@webgo_cl">
               <FaYoutube className="w-6 h-6 text-[#1C1C1C99] transition-all ease-out hover:text-primary-500" />
+            </a>
+            <a href="mailto:webgo.cl@gmail.com">
+              <BiLogoGmail className="w-6 h-6 text-[#1C1C1C99] transition-all ease-out hover:text-primary-500" />
             </a>
 
           </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
+import { BiLogoGmail } from "react-icons/bi"
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"
 
 export default function Cta() {
@@ -160,14 +161,14 @@ export default function Cta() {
                     </p>
                     {/* <img src="/Webgo-logo.webp" alt="Logo Opencode" className="w-28 h-auto" /> */}
                     <div className="flex space-x-6">
-                        <a href="https://facebook.com">
+                        <a href="https://www.instagram.com/webgo.cl">
                             <FaInstagram className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
                         </a>
-                        <a href="https://facebook.com">
-                            <FaFacebook className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
-                        </a>
-                        <a href="https://facebook.com">
+                        <a href="https://www.youtube.com/@webgo_cl">
                             <FaYoutube className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
+                        </a>
+                        <a href="mailto:webgo.cl@gmail.com">
+                            <BiLogoGmail className="w-6 h-6 text-gray-900 transition-all ease-out hover:text-primary-500" />
                         </a>
                     </div>
                 </div>
