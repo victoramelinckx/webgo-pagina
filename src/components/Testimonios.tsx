@@ -92,9 +92,9 @@ const testimonials = [
         text: "No solo crearon un diseño hermoso, sino que también se aseguraron de que la experiencia del usuario fuera intuitiva y eficiente. El feedback ha sido fantástico.",
         rating: 5,
         author: {
-            name: "Sofía Castro",
-            handle: "Diseñadora UX/UI",
-            avatar: "/testi6.png",
+            name: "Marcela Sandía",
+            handle: "Psicóloga",
+            avatar: "/marcela.jpeg",
         },
     },
 ]

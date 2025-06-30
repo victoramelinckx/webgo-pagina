@@ -1,13 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/Button"
 import { Card, CardContent } from "@/components/ui/Card"
-import { Badge } from "@/components/ui/Badge"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Users, Minus, Info, X, Plus, Dot, ChevronDown } from "lucide-react"
+import { X, Plus, Dot, ChevronDown } from "lucide-react"
 import { Boton } from "./boton"
+import { Element } from "react-scroll";
+
 
 interface PricingPlan {
     id: string
@@ -141,7 +140,7 @@ export default function Precios() {
     }
 
     return (
-        <section className="pt-0 pb-10 md:py-10 px-4 bg-gray-100">
+        <Element name="precios" className="pt-0 pb-10 md:py-10 px-4 bg-gray-100">
             <TooltipProvider>
                 <div className="max-w-5xl mx-auto">
                     {/* Header */}
@@ -292,6 +291,6 @@ export default function Precios() {
           }
         }
       `}</style>
-        </section>
+        </Element>
     )
 }
