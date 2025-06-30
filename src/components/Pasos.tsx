@@ -73,29 +73,6 @@ export default function Pasos() {
                     </div>
                 </div>
 
-                {/* Trust Badges */}
-                <div className="hidden md:flex flex-col md:flex-row justify-center items-center gap-8 text-gray-600">
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium">Compra segura con Stripe</span>
-                        <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">S</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium">Comunicación vía slack</span>
-                        <div className="w-6 h-6 bg-purple-600 rounded flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">#</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium">Entregado en Wordpress</span>
-                        <div className="w-6 h-6 bg-blue-800 rounded-full flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">W</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     )
